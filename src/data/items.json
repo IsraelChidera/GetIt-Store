@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Winter sweater",
+        "category": "Fashion",
+        "price": 155.99,
+        "imgUrl": "/imgs/sweater.png"
+    },
+    {
+        "id": 2,
+        "name": "Sweat shirt",
+        "category": "Fashion",
+        "price": 105.99,
+        "imgUrl": "/imgs/sweatshirt.png"
+    },
+    {
+        "id": 3,
+        "name": "Home gym kits",
+        "category": "Health and fitness",
+        "price": 455.99,
+        "imgUrl": "/imgs/gymkits.png"
+    }
+]
