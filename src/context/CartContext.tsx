@@ -27,9 +27,8 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }:
-    ShoppingCartProviderProps) {
-    //const [isShow, setItShow] = useState(true);
-    const [isOpen,  setIsOpen] = useState<Boolean>(false);
+    ShoppingCartProviderProps) {    
+    const [isOpen,  setIsOpen] = useState(false);
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
     function getItemQuantity(id: number): number {
@@ -88,7 +87,7 @@ export function ShoppingCartProvider({ children }:
     return (
         <CartContext.Provider value={{ openCart, closeCart, cartQuantity, cartItems, getItemQuantity, removeFromCart, increaseCartQuantity, decreaseCartQuantity }}>
             {children}
-            <ShoppingCart/>
+            <ShoppingCart isOpen={isOpen}/>
         </CartContext.Provider>
     )
 }

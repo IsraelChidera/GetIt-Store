@@ -1,22 +1,22 @@
-import { useShoppingCart } from "../context/CartContext"
+import { useShoppingCart } from "../context/CartContext";
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
-export function ShoppingCart(){
+type ShoppingCartProps = {
+    isOpen: boolean
+}
 
-    const { closeCart} = useShoppingCart();
+export function ShoppingCart({ isOpen }: ShoppingCartProps) {
 
-    return(        
-        <>
-            <section >
-                <div>
-                    <h1>
-                        ShoppingCart
-                    </h1>
+    const { closeCart } = useShoppingCart();
 
-                    <button onClick={closeCart}>
-                        X
-                    </button>
-                </div>
-            </section>
-        </>
-    )
+    return <Offcanvas show={isOpen} onHide={closeCart}>
+        <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+            Some text as placeholder. In real life you can have the elements you
+            have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+    </Offcanvas>
+
 }  
