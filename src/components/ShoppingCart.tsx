@@ -9,7 +9,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
 
     const { closeCart } = useShoppingCart();
 
-    return <Offcanvas show={isOpen} onHide={closeCart}>
+    return <Offcanvas show={isOpen} onHide={closeCart} className="bg-red-400 text-white">
         <Offcanvas.Header closeButton>
             <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>
