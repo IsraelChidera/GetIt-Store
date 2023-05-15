@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { Store } from './pages/Store';
 import { Navbar } from './components/Navbar';
 import { ShoppingCartProvider } from './context/CartContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
